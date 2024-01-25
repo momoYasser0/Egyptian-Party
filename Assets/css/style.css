@@ -1,0 +1,252 @@
+/*! ===========>Global Styles<============== */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff3d00;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #263038;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #263038;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(0deg, rgba(255, 61, 0, 0.2) 33%, #ff3d00 100%);
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #263238;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+/*@ ===========>Home Styles<============== */
+#home {
+    background-image: linear-gradient(rgba(214, 46, 51, 0.6), rgba(214, 46, 51, 0.6)), url('../imgs/events-heavenly-header.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    position: relative;
+}
+
+#home .home-content {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+#home .home-content h2 {
+    font-size: 60px;
+
+}
+
+#home .home-content p {
+    font-size: 18px;
+}
+
+#leftMenu.expand {
+    left: 0;
+}
+
+#leftMenu {
+    height: 100vh;
+    width: 15%;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: -250px;
+    background-color: #111;
+    transition: 0.5s;
+    padding-top: 1.875rem;
+}
+
+#leftMenu .openBtn {
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    cursor: pointer;
+    color: #263038;
+
+}
+
+#leftMenu .closebtn {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    font-size: 1.5625rem;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    display: block;
+    padding-top: 10px;
+
+}
+
+#leftMenu a {
+    display: block;
+    transition: 0.3s;
+    padding: 20px 8px 20px 25px;
+    font-size: 1.5625rem;
+}
+
+#leftMenu a:hover,
+#leftMenu .closebtn:hover {
+    color: rgba(214, 46, 51, 0.4);
+}
+
+/* ! ===========>Slider Down<========== */
+
+#sliderDown {
+    width: 50%;
+    margin: 50px auto;
+}
+
+#sliderDown .inner {
+    display: none;
+}
+
+#sliderDown .first {
+    display: block;
+}
+
+#sliderDown h3 {
+    color: #fff;
+    padding: 10px;
+    background-color: rgba(214, 46, 51, 0.6);
+    cursor: pointer;
+    margin: 0;
+}
+
+#sliderDown p {
+    padding: 10px;
+    background-color: #ccc;
+    /* display: none; */
+    margin-bottom: 0;
+}
+
+/* * ===========>Counter Styles<============== */
+#count {
+    background-image: linear-gradient(rgba(214, 46, 51, 0.6), rgba(214, 46, 51, 0.6)), url('../imgs/invitation-2508607__340.jpg');
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    padding: 80px 0;
+}
+
+#count .time {
+    padding: 60px 40px;
+    border: 1px solid #fff;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+
+/* & ===========>Contact Styles<============== */
+#contact {
+    padding: 50px 0;
+}
+
+#contact .head {
+    margin-bottom: 30px;
+}
+
+#contact .head h2 {
+    color: #444;
+    font-size: 2.1875rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+}
+
+#contact .head p {
+    color: #777;
+}
+
+#contact .contact-info h4 {
+    color: #444;
+    font-size: 1.125rem;
+    font-weight: bolder;
+}
+
+#contact .contact-info p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #777;
+}
+
+#contact form textarea {
+    resize: none;
+    height: 150px;
+
+}
+
+#contact #chars {
+    font-size: 1.125rem;
+    color: #D62E33;
+}
+
+#contact .social a {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    color: #777;
+    border: 1px solid #999;
+    margin-right: 15px;
+    transition: 0.5s;
+}
+
+#contact .social a:hover {
+    color: #fff;
+    background-color: #D62E33;
+}
